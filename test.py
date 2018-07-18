@@ -48,7 +48,8 @@ matrix = RGBMatrix(options = options)
 #     time.sleep(0.05)
 
 # matrix.Clear()
-eye = Image.open("eye_open_new.png").convert('RGB')
-matrix.SetImage(eye, 0, 0)
+eye_open = Image.open("eye_open_slit.gif").convert('RGB')
+matrix.SetImage(eye_open, 0, 0)
 while True:
+	matrix.SetImage(eye_open, 0, 0)
 	time.sleep(0.5)
