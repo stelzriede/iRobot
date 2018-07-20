@@ -15,7 +15,7 @@ options.rows = 64
 options.cols = 64
 options.chain_length = 1
 options.parallel = 1
-#options.hardware_mapping = 'adafruit-hat'  # If you have an Adafruit HAT: 'adafruit-hat'
+options.hardware_mapping = 'adafruit-hat'  # If you have an Adafruit HAT: 'adafruit-hat'
 options.led_rgb_sequence = 'RBG'
 
 matrix = RGBMatrix(options = options)
@@ -35,10 +35,22 @@ matrix = RGBMatrix(options = options)
 #     matrix.SetImage(image, n, n)
 #     time.sleep(0.05)
 
+
 # matrix.Clear()
 eye_open = Image.open("colorfuleye.gif").convert('RGB')
 matrix.SetImage(eye_open, 0, 0)
+eye_half = Image.open("colorfuleye_mid.gif").convert('RGB')
+matrix.SetImage(eye_half, 0, 0)
+eye_slit = Image.open("colorfuleye_low.gif").convert('RGB')
+matrix.SetImage(eye_slit, 0, 0)
+eye_closed = Image.open("blank.gif").convert('RGB')
+matrix.SetImage(eye_closed, 0, 0)
 while True:
 	matrix.SetImage(eye_open, 0, 0)
-	time.sleep(0.5)
-
+	time.sleep(2.5)
+	matrix.SetImage(eye_half, 0, 0)
+	time.sleep(0.08)
+	matrix.SetImage(eye_slit, 0, 0)
+	time.sleep(0.08)
+	matrix.SetImage(eye_closed, 0, 0)
+	time.sleep(0.08)
