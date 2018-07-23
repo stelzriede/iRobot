@@ -37,4 +37,6 @@ draw = ImageDraw.Draw(image)
 
 while True:
 	draw.rectangle((0, 0, 31, 31), fill=(0, 0, 0), outline=(0, 0, 255))
+	time.sleep(2.5)
 	draw.ellipse((6, 10, -6, -10), fill=(0,0,0), outline=(0,0,0))
+	time.sleep(2.5)
