@@ -37,6 +37,4 @@ draw = ImageDraw.Draw(image)
 
 while True:
     draw.ellipse((6, 10, -6, -10), fill=(0,0,0), outline=(0,0,255))
-    matrix.Clear()
-    matrix.SetImage(image, -64, 65)
-    time.sleep(2.5)
+    image.show()
