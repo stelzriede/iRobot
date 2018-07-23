@@ -36,4 +36,4 @@ image = Image.new("RGB", (64,  64))
 draw = ImageDraw.Draw(image)
 
 draw.rectangle((0, 0, 31, 31), fill=(0, 0, 0), outline=(0, 0, 255))
-draw.ellipse((6, 10), fill=(0,0,0), outline=(0,0,0))
+draw.ellipse((6, 10, -6, -10), fill=(0,0,0), outline=(0,0,0))
