@@ -32,4 +32,5 @@ options.led_rgb_sequence = 'RBG'
 
 matrix = RGBMatrix(options = options)
 
+draw = ImageDraw.Draw(image) 
 draw.ellipse(6, 10)
