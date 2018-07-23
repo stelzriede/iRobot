@@ -16,9 +16,9 @@
 # PIL ImageDraw module (draw shapes to images) explained here:
 # http://effbot.org/imagingbook/imagedraw.htm
 
-from PIL import Image
-from PIL import ImageDraw
-from PIL import ImageShow
+from PIL import Image as Image
+from PIL import ImageDraw as ImageDraw
+from PIL import ImageShow as ImageShow
 import time
 from rgbmatrix import RGBMatrix, RGBMatrixOptions
 
@@ -36,5 +36,5 @@ matrix = RGBMatrix(options = options)
 image = Image.new("RGB", (64,  64))
 draw = ImageDraw.Draw(image)
 
-while True:
-    draw.ellipse((0, 0, 50, 100), fill=255)
+draw.ellipse((0, 0, 50, 100), fill=255)
+image.show()
